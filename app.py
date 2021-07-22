@@ -38,7 +38,7 @@ def predict():
         test_image = convert_image_to_array(path)
         test_image = np.expand_dims(test_image, axis = 0)
         test_image=np.array(test_image)
-        pred=int(model.predict_classes(test_image)[0])
+        pred=int(model.predict(test_image)[0])
         
         res=[]
         if pred==1:
